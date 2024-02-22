@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Científica</title>
+    
+</head>
+<body>
+    <img src="assets/spongebob.jpg" alt="">
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="grid-container">
+                <div class="input-grid">
+                    <div class="input-screen">
+                        <h2 style = "color: #fff;">Entrada</h2>
+                        <input type="text" id="inputField">
+                    </div>
+                    <div class="result-screen">
+                        <h2 style = "color: #fff;">Resultado</h2>
+                        <input type="text" id="resultField" readonly>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="appendToInput('7')">7</button>
+                    <button onclick="appendToInput('8')">8</button>
+                    <button onclick="appendToInput('9')">9</button>
+                    <button onclick="appendToInput('+')">+</button>
+                    <button onclick="appendToInput('4')">4</button>
+                    <button onclick="appendToInput('5')">5</button>
+                    <button onclick="appendToInput('6')">6</button>
+                    <button onclick="appendToInput('-')">-</button>
+                    <button onclick="appendToInput('1')">1</button>
+                    <button onclick="appendToInput('2')">2</button>
+                    <button onclick="appendToInput('3')">3</button>
+                    <button onclick="appendToInput('*')">*</button>
+                    <button onclick="appendToInput('0')">0</button>
+                    <button onclick="appendToInput('.')">.</button>
+                    <button onclick="appendToInput('/')">/</button>
+                    <button onclick="appendToInput('√')">√</button>
+                    <button onclick="appendToInput('^2')">^2</button>
+                    <button onclick="appendToInput('^')">^</button>
+                    <button onclick="appendToInput('!')">!</button>
+                    <button onclick="appendToInput('LOG²')">LOG²</button>
+                    <button onclick="appendToInput('LOG¹⁰')">LOG¹⁰</button>
+                    <button onclick="appendToInput('LOGN')">LOGN</button>
+                    <button onclick="appendToInput('(')">(</button>
+                    <button onclick="appendToInput(')')">)</button>
+                    <button class="clear-button" onclick="clearInput()">C</button>
+                  <button class="equals-button" onclick="calculateResult()">=</button>
+<button onclick="backspace()">&#9003;</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   <br> <img src="assets/bobesponja.jpg" alt="">
+    <script src="script.js"></script>
+</body>
+</html>
