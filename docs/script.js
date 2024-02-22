@@ -37,7 +37,7 @@ function calculateResult() {
         if (isNaN(result) || !isFinite(result)) {
             resultField.value = 'Operação invalida';
         } else {
-            resultField.value = result.toFixed(3)
+            resultField.value = result
             inputField.value = '';
             operationInProgress = false;
         }
