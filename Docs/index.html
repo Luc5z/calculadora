@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #70d2e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator-container {
+    background-color: #846317;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.calculator {
+    background-color: #F2D230;
+    background-image: url(pxfueld.jpg);
+    border: 1px solid #333;
+    border-radius: 10px; 
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 60vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width: 70%;
+    border-radius: 30px;
+    border: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box; 
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+button {
+    font-size: 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 90%;
+}
+
+button:hover {
+    background-color: #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+img{
+    width: 200px;
+    height: auto;
+}
+      .equals-button {
+    grid-column: span 2;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: auto;
+}
+
+.equals-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+      .clear-button {
+    background-color: red; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.clear-button:hover {
+    background-color: darkred; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <img src="spongebob.jpg" alt="">
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="grid-container">
+                <div class="input-grid">
+                    <div class="input-screen">
+                        <h2 style = "color: #fff;">Entrada</h2>
+                        <input type="text" id="inputField">
+                    </div>
+                    <div class="result-screen">
+                        <h2 style = "color: #fff;">Resultado</h2>
+                        <input type="text" id="resultField" readonly>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button onclick="appendToInput('7')">7</button>
+                    <button onclick="appendToInput('8')">8</button>
+                    <button onclick="appendToInput('9')">9</button>
+                    <button onclick="appendToInput('+')">+</button>
+                    <button onclick="appendToInput('4')">4</button>
+                    <button onclick="appendToInput('5')">5</button>
+                    <button onclick="appendToInput('6')">6</button>
+                    <button onclick="appendToInput('-')">-</button>
+                    <button onclick="appendToInput('1')">1</button>
+                    <button onclick="appendToInput('2')">2</button>
+                    <button onclick="appendToInput('3')">3</button>
+                    <button onclick="appendToInput('*')">*</button>
+                    <button onclick="appendToInput('0')">0</button>
+                    <button onclick="appendToInput('.')">.</button>
+                    <button onclick="appendToInput('/')">/</button>
+                    <button onclick="appendToInput('√')">√</button>
+                    <button onclick="appendToInput('^2')">^2</button>
+                    <button onclick="appendToInput('^')">^</button>
+                    <button onclick="appendToInput('!')">!</button>
+                    <button onclick="appendToInput('LOG²')">LOG²</button>
+                    <button onclick="appendToInput('LOG¹⁰')">LOG¹⁰</button>
+                    <button onclick="appendToInput('LOGN')">LOGN</button>
+                    <button onclick="appendToInput('(')">(</button>
+                    <button onclick="appendToInput(')')">)</button>
+                    <button class="clear-button" onclick="clearInput()">C</button>
+                  <button class="equals-button" onclick="calculateResult()">=</button>
+<button onclick="backspace()">&#9003;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   <br> <img src="bobesponja.jpg" alt="">
+    <script src="script.js"></script>
+</body>
+</html>
